@@ -24,8 +24,8 @@ resource "azurerm_subnet_network_security_group_association" "bastion_subnet_nsg
 ## Locals Block for Security Rules
 locals {
   bastion_inbound_ports_map = {
-    "100" : "22", # If the key starts with a number, you must use the colon syntax ":" instead of "="
-    "110" : "3389"
+    "100" : "22", # SSH, If the key starts with a number, you must use the colon syntax ":" instead of "="
+    "110" : "3389" # RDP
   } 
 }
 ## NSG Inbound Rule for Bastion / Management Subnets
